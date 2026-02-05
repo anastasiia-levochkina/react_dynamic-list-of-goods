@@ -3,9 +3,7 @@ import { Good } from '../types/Good';
 const API_URL = '/goods.json';
 
 export function getAll(): Promise<Good[]> {
-  return fetch(API_URL, {
-    cache: 'no-store',
-  }).then(response => response.json());
+  return fetch(API_URL).then(response => response.json());
 }
 
 export function get5First(): Promise<Good[]> {
